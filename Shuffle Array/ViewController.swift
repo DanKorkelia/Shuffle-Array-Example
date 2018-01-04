@@ -10,7 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myLabel: UILabel!
     
+    let myShuffledArray = myTestFunction()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        myLabel.text = "\(myTestArrayOfNumbers)" //prints to simulator
+        
+        print(myTestArrayOfNumbers) //prints to console
+    }
 
 }
-
