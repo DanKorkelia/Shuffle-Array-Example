@@ -13,6 +13,7 @@ import Foundation
 var myTestArrayOfNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 func myTestFunction() -> String {
+
     return "\(myTestArrayOfNumbers.shuffleArray())"
 }
 
@@ -26,7 +27,7 @@ extension MutableCollection {
             else { return }
         
         for (firstUnshuffled, unshuffledCount) in zip(indices, stride(from: CountOfArray, to: 1, by: -1)) {
-            let step: IndexDistance = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
+            let step: Int = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
             let specifiedIndex = index(firstUnshuffled, offsetBy: step)
             swapAt(firstUnshuffled, specifiedIndex)
         }

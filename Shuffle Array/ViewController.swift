@@ -12,11 +12,22 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var myLabel: UILabel!
     
-    let myShuffledArray = myTestFunction()
+    //let myShuffledArray = myTestFunction()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        runMe()
+     
+    }
+    
+    @IBAction func refreshAction(_ sender: Any) {
+        myTestFunction()
+        runMe()
+    }
+    
+    func runMe() {
+        
         myLabel.text = "\(myTestArrayOfNumbers)" //prints to simulator
         
         print(myTestArrayOfNumbers) //prints to console
